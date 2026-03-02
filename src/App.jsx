@@ -1,32 +1,28 @@
-import 'react';
-import { useState, useEffect } from 'react';
-//fetch, memory links to other pages,
-//header dosent change, only the content
+import Layout from './Layout';
+import MainPage from './pages/MainPage'
+import ShopPage from './pages/ShopPage'
+import BasketPage from './pages/BasketPage'
+import { createBrowserRouter, RouterProvider } from "react-router";
 
+//App component, includes router provider
+//header dosent change, only the content using router
 
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <Layout />,
+        children: [
+            {index: true, element: <MainPage />},
+            {path: 'shop', element: <ShopPage />},
+            {path: 'basket', element: <BasketPage />}
 
+        ]
+    }
+])
 
 function App(){
-    const [storeItems, setStoreItems] = useState([]);
-    const [cartItems, setCatrtItems] = useState([]);
 
-    //Fetching data from the server
-    useEffect(() => {
-        fetch('https://fakestoreapi.com/products')
-            .then(response => {
-                if(response.status >= 400){
-                    throw new Error(`Failed to fetch data, status code: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => setStoreItems(data))
-            .catch(e => console.error(`Error fetching data: ${e.message}`));
-        
-    },[]);
-
-    console.log(storeItems)
-
-    return <h1>Our Firsts Test</h1>
+    return <RouterProvider router={router}/>
 }
 
 export default App;
