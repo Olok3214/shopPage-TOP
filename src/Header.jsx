@@ -4,12 +4,22 @@ import { Link } from 'react-router';
 function Header(){
     return(
         <header>
-            This is a header
             <nav>
-                <Link to='/'>Main</Link>
-                <Link to='/shop'>Shop</Link>
-                <Link to='/basket'>Basket</Link>
-                <a href='github.com'>Github</a>
+                <Link to='/'>
+                Placeholder shop
+                </Link>
+                <Link to='/shop'>
+                Shop
+                <i class="fa-solid fa-shop"></i>
+                </Link>
+                <Link to='/basket'>
+                Basket
+                <i class="fa-solid fa-basket-shopping"></i>
+                </Link>
+                <a href='github.com'>
+                Github
+                <i class="fa-brands fa-github"></i>
+                </a>
             </nav>
         </header>
     )
