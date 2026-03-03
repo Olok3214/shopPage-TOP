@@ -7,29 +7,29 @@ import Header from "./Header.jsx"
 
 function Layout(){
     const [storeItems, setStoreItems] = useState([]);
-    //const [cartItems, setCatrtItems] = useState([]);
+    const [cartItems, setCatrtItems] = useState([]);
     
         //Fetching data from the server
-        useEffect(() => {
-            fetch('https://fakestoreapi.com/products')
-                .then(response => {
-                    if(response.status >= 400){
-                        throw new Error(`Failed to fetch data, status code: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => setStoreItems(data))
-                .catch(e => console.error(`Error fetching data: ${e.message}`));
-            
-        },[]);
+    useEffect(() => {
+        fetch('https://fakestoreapi.com/products')
+            .then(response => {
+                if(response.status >= 400){
+                    throw new Error(`Failed to fetch data, status code: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => setStoreItems(data))
+            .catch(e => console.error(`Error fetching data: ${e.message}`));
+        
+    },[]);
     
-        console.log(storeItems)
+    console.log(storeItems)
 
     return (
         <>
-        <Header />
+        <Header itemsInBasket={cartItems}/>
         <main>
-            <Outlet />
+            <Outlet/>
         </main>
         </>
     )

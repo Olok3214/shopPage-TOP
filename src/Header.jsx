@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router';
 
-function Header(){
+function Header(itemsInBasket){
     return(
         <header>
             <nav>
@@ -13,7 +13,7 @@ function Header(){
                 <i class="fa-solid fa-shop"></i>
                 </Link>
                 <Link to='/basket'>
-                Basket
+                Basket {itemsInBasket}
                 <i class="fa-solid fa-basket-shopping"></i>
                 </Link>
                 <a href='github.com'>
