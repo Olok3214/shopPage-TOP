@@ -10,12 +10,12 @@ function Header({items}){
                 </Link>
                 <Link to='/shop'>
                 Shop
-                <i class="fa-solid fa-shop"></i>
+                <i className="fa-solid fa-shop"></i>
                 </Link>
                 
                 <Link to='/basket'>
                 Basket <span className='cart-items'>{items}</span>
-                <i class="fa-solid fa-basket-shopping"></i>
+                <i className="fa-solid fa-basket-shopping"></i>
                 </Link>
             </nav>
         </header>
