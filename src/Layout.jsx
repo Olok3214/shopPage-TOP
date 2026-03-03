@@ -27,7 +27,7 @@ function Layout(){
 
     return (
         <>
-        <Header itemsInBasket={cartItems}/>
+        <Header items={cartItems.length}/>
         <main>
             <Outlet/>
         </main>
