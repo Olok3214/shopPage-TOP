@@ -7,7 +7,7 @@ import Header from "./Header.jsx"
 
 function Layout(){
     const [storeItems, setStoreItems] = useState([]);
-    const [cartItems, setCatrtItems] = useState([]);
+    const [cartItems, setCartItems] = useState([]);
     
         //Fetching data from the server
     useEffect(() => {
@@ -23,13 +23,13 @@ function Layout(){
         
     },[]);
     
-    console.log(storeItems)
+    
 
     return (
         <>
-        <Header items={cartItems.length}/>
+        <Header items={cartItems}/>
         <main>
-            <Outlet/>
+            <Outlet context={{storeItems,setCartItems}}/>
         </main>
         </>
     )
