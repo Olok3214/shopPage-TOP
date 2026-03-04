@@ -1,7 +1,7 @@
 import Layout from './Layout';
 import MainPage from './pages/MainPage'
 import ShopPage from './pages/ShopPage'
-import BasketPage from './pages/BasketPage'
+import CartPage from './pages/CartPage'
 import { createBrowserRouter, RouterProvider } from "react-router";
 
 //App component, includes router provider
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
         children: [
             {index: true, element: <MainPage />},
             {path: 'shop', element: <ShopPage />},
-            {path: 'basket', element: <BasketPage />}
+            {path: 'basket', element: <CartPage />}
 
         ]
     }

@@ -8,6 +8,7 @@ function ShopPage(){
         <>
             {storeItems.map(item => <ShopPanel 
                 key={item.id}
+                itemId = {item.id}
                 title={item.title}
                 price={item.price}
                 image={item.image}

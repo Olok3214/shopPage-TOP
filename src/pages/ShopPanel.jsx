@@ -1,12 +1,12 @@
 import {useState} from 'react'
 
-function ShopPanel({title,price,image,desc,rating,setCartItems}){
+function ShopPanel({itemId,title,price,image,desc,rating,setCartItems}){
 
     const [selectedAmount, setSelectedAmount] = useState(0)
 
     function handleAddToCart(){
         if(selectedAmount > 0){
-            setCartItems(prev => [...prev, {title,price,selectedAmount}])
+            setCartItems(prev => [...prev, {itemId,title,price,selectedAmount}])
             setSelectedAmount(0)
         }
     }

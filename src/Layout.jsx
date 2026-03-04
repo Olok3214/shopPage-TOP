@@ -29,7 +29,7 @@ function Layout(){
         <>
         <Header items={cartItems}/>
         <main>
-            <Outlet context={{storeItems,setCartItems}}/>
+            <Outlet context={{storeItems,setCartItems,cartItems}}/>
         </main>
         </>
     )
