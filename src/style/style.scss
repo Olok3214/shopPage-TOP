@@ -18,13 +18,15 @@ body{
 }
 
 header{
+    position: fixed;
+    top: 0;
+    width: 100vw;
     background-color: #111111;
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
+    border-bottom: 1px solid rgb(112, 112, 112);
     nav{
         display: flex;
         gap: 2rem;
@@ -54,3 +56,112 @@ header{
 
     }
 }
+
+main{
+    margin-top: 6rem;
+    height: 80vh;
+}
+
+.mainPage{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    h1{
+        font-weight: bolder;
+        font-size: 3em;
+    }
+    p{
+        text-align: center;
+    }
+    a{
+        color: white;
+        border: 1px solid white;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        transition: background-color 0.3s ease;
+        &:hover{
+            background-color: rgb(161, 0, 0);
+        }
+    }
+}
+
+.shopPage{
+    height: 100%;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit,22rem);
+    gap: 1rem;
+    justify-content: center;
+    justify-items: center;
+    
+    margin: 2rem;
+    
+    
+    
+    
+    
+    
+    img{
+        width: 10rem;
+    }
+
+    .shopDesc{
+        font-size: 0.8em;
+    }
+
+    .shopPanel{
+        background-color: #525252;
+        padding: 1rem;
+        border: 1px solid white;
+        border-radius: 0.3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .shopInfo{
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            padding: 0.3rem 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-weight: bolder;
+            .shopRating{
+                color: rgb(212, 126, 14);
+            }
+
+        }
+        .shopAmount{
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+            align-items: center;
+            button{
+                width: 2rem;
+                border-radius: 50%;
+                font-weight: bolder;
+            }
+            
+            
+        }
+
+        button{
+                padding: 0.5rem;
+                cursor: pointer;
+                background-color: rgb(255, 243, 243);
+                border: none;
+                transition: background-color 0.2s ease;
+
+                &:hover{
+                    background-color: rgb(255, 216, 216);
+                }
+            }
+    
+}
+

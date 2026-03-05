@@ -9,10 +9,11 @@ function BasketPage(){
 
 
 //title,price,selectedAmount, setCartItems
-    return (<>
+    return (<div className="cartPage">
         <h1> Your Cart:</h1>
-        {cartItems.map( item => <CartPanel 
+        {cartItems.map( item => <CartPanel className="item"
             key = {item.itemId}
+            title = {item.title}
             itemId={item.itemId}
             price = {item.price}
             selectedAmount = {item.selectedAmount}
@@ -23,6 +24,6 @@ function BasketPage(){
             Total: ${total.toFixed(2)}
             <button type="button">Check out</button>
         </div>
-    </>)
+    </div>)
 }
 export default BasketPage;

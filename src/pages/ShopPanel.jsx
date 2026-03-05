@@ -17,7 +17,7 @@ function ShopPanel({itemId,title,price,image,desc,rating,setCartItems}){
             <h2>{title}</h2>
             <img src={image} alt=""></img>
             <p className="shopDesc">{desc}</p>
-            <p>
+            <p className='shopInfo'>
                 <span className="shopPrice">{price}$</span>
                 <span className="shopRating">{rating}<i className="fa-regular fa-star"></i></span>
             </p>

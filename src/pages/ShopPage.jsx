@@ -5,7 +5,7 @@ function ShopPage(){
     const {storeItems, setCartItems} = useOutletContext()
 
     return(
-        <>
+        <div className="shopPage">
             {storeItems.map(item => <ShopPanel 
                 key={item.id}
                 itemId = {item.id}
@@ -16,7 +16,7 @@ function ShopPage(){
                 rating={item.rating.rate}
                 setCartItems={setCartItems}
             />)}
-        </>
+        </div>
     )
 }
 export default ShopPage;
