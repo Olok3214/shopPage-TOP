@@ -17,7 +17,7 @@ function Header({items}){
                 </Link>
                 
                 <Link to='/basket'>
-                    Basket 
+                    Basket   
                     <span className='cart-items'>
                         {items.reduce((total, item) => total + item.selectedAmount, 0)}
                     </span>
